@@ -2,9 +2,15 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <style>
+      a {
+        opacity: 0%;
+      }
+    </style>
   </head>
   <body>
-    <a-scene>
+    <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
+      <a id="myEnterVRButton" href="#"></a>
         <a-sky src="assets/360image.jpeg" rotation="0 -130 0"></a-sky>
     </a-scene>
   </body>
