@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">    
+    <script src="main.js" defer></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <style>
-      a {
-        opacity: 0%;
-      }
-    </style>
-  </head>
+    <script src="https://cdn.jsdelivr.net/gh/IdeaSpaceVR/aframe-particle-system-component@master/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script> 
+  </head>  
   <body>
-    <a-scene vr-mode-ui="enterVRButton: #myEnterVRButton">
-      <a id="myEnterVRButton" href="#"></a>
-        <a-sky src="assets/360image.jpeg" rotation="0 -130 0"></a-sky>
+    <div id="video-holder">
+      <video autoplay></video>
+    </div>
+     <a-scene>
+      <a-entity camera look-controls="touchEnabled:false;" position="0 1.6 0"></a-entity>
+      <a-entity position="0 2.25 -15" particle-system="color:#f7e920"></a-entity>
+      <a-entity text-geometry="value: Hello World" position="-1.558 1.6 -2"></a-entity>
     </a-scene>
   </body>
 </html>
